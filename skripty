@@ -112,3 +112,12 @@ ALL(data),
 data[datum] <=MAX(data[datum])),
 
 data[srazky])
+
+____________________________________________________
+
+13 suma srazek kumulativne v roce = 
+
+SUMX(FILTER(ALL(data),
+data[rok]= MAX(data[rok])
+&& data[mesic] <=max(data[mesic])),
+data[srazky])
