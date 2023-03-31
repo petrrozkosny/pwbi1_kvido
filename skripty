@@ -81,3 +81,10 @@ ____________________________________________________
 
 SUMX(FILTER(data,data[lokalita] = "TURANY"),data[srazky])
 
+___________________________________________________
+
+08 suma srazek rok = 
+SUMX(filter(ALL(data),
+data[rok] = MAX(data[rok])),
+data[srazky])
+
