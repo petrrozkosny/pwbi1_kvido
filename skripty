@@ -128,3 +128,16 @@ ___________________________________________________
 
 COUNTX(FILTER(data,data[srazky] >0 &&
 data[lokalita] = "RUZYNE"),data[datum])
+
+____________________________________________________
+
+15 suma srazek mezirocne = 
+-- suma srazek v danem mesici,roce
+SUM(data[srazky])
+-- MÍNUS
+-
+-- suma srazek v danem mesici, predchozim roce
+SUMX(FILTER(ALL(data),
+data[rok] = MAX(data[rok]) - 1
+&& data[mesic] = MAX(data[mesic])),
+data[srazky])
