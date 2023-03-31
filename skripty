@@ -72,3 +72,12 @@ SUM(data[srazky])
 -
 SUMX(FILTER(ALL(data),
 data[rok] = MINX(ALL(data),data[rok])),data[srazky])
+
+____________________________________________________
+
+07 suma srazek turany = 
+
+-- v danem roce a danem mesici
+
+SUMX(FILTER(data,data[lokalita] = "TURANY"),data[srazky])
+
