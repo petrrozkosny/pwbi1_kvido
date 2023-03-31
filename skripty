@@ -121,3 +121,10 @@ SUMX(FILTER(ALL(data),
 data[rok]= MAX(data[rok])
 && data[mesic] <=max(data[mesic])),
 data[srazky])
+
+___________________________________________________
+
+14 pocet dnu ruzyne prselo = 
+
+COUNTX(FILTER(data,data[srazky] >0 &&
+data[lokalita] = "RUZYNE"),data[datum])
