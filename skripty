@@ -87,4 +87,6 @@ ___________________________________________________
 SUMX(filter(ALL(data),
 data[rok] = MAX(data[rok])),
 data[srazky])
-
+________________________________________________
+09 minimalni datum = 
+MIN(data[datum])
