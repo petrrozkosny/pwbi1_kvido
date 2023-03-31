@@ -95,3 +95,10 @@ ________________________________________________
 
 10 prvni destivy den = 
 MINX(FILTER(data,data[srazky]>0),data[datum])
+
+__________________________________________________
+
+11 minimalni datum v roce = 
+MINX(
+    FILTER(ALL(data),data[rok] = MAX(data[rok])),
+data[datum])
