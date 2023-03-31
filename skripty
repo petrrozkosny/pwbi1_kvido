@@ -141,3 +141,20 @@ SUMX(FILTER(ALL(data),
 data[rok] = MAX(data[rok]) - 1
 && data[mesic] = MAX(data[mesic])),
 data[srazky])
+
+___________________________________________________________
+
+16 suma srazek mezimesicne = 
+
+-- suma srazek v danem roce, mesici
+SUM(data[srazky])
+-- MÍNUS
+-
+-- suma srazek v predchozim mesici
+SUMX(
+    FILTER(
+    ALL(data),
+    data[datum] >= EOMONTH(data[datum],-2)+1
+    && data[datum] <= EOMONTH(data[datum],-1)),
+data[srazky])
+
