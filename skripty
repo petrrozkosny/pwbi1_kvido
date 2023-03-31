@@ -90,3 +90,8 @@ data[srazky])
 ________________________________________________
 09 minimalni datum = 
 MIN(data[datum])
+
+________________________________________________
+
+10 prvni destivy den = 
+MINX(FILTER(data,data[srazky]>0),data[datum])
