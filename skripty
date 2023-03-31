@@ -102,3 +102,13 @@ __________________________________________________
 MINX(
     FILTER(ALL(data),data[rok] = MAX(data[rok])),
 data[datum])
+_________________________________________________
+
+12 suma srazek kumulativne = 
+-- od pocatku
+SUMX(
+FILTER(
+ALL(data),
+data[datum] <=MAX(data[datum])),
+
+data[srazky])
